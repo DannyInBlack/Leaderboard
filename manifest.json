@@ -1,0 +1,24 @@
+{
+  "name": "Codeforces Standings Refresher",
+  "version": "1.0",
+  "manifest_version": 3,
+  "description": "Uses the chrome.scripting API to inject JavaScript into codeforces, extracting standings to Firebase.",
+  "background": {
+    "service_worker": "dist/serviceWorker.bundle.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://codeforces.com/*"],
+      "js": ["dist/contentScript.bundle.js"]
+    }
+  ],
+  "permissions": ["scripting", "webNavigation", "storage"],
+  "host_permissions": [
+    "https://codeforces.com/*",
+    "https://*.firebaseio.com/*", 
+    "https://*.firestore.googleapis.com/*"
+  ],
+  "action": {
+    "default_title": "Inject script to update DB"
+  }
+}
