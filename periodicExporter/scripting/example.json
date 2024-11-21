@@ -1,0 +1,23 @@
+{
+  "rank": "1",
+  "username": "d19n",
+  "penalty": "132",
+  "problemsSolved": "1",
+  "problems": [
+    {
+      "state": "Solved",
+      "attempts": 1,
+      "time": 32
+    },
+    {
+      "state": "Attempted",
+      "attempts": 1,
+      "time": 0
+    },
+    {
+      "state": "Not Tried",
+      "attempts": 0,
+      "time": 0
+    }
+  ]
+}
