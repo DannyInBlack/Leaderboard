@@ -1,6 +1,6 @@
 {
   "name": "Codeforces Standings Refresher",
-  "version": "1.0",
+  "version": "1.1",
   "manifest_version": 3,
   "description": "Uses the chrome.scripting API to inject JavaScript into codeforces, extracting standings to Firebase.",
   "content_scripts": [
