@@ -1,3 +1,4 @@
+const { log } = require('console');
 const path = require('path');
 
 module.exports = {
@@ -9,6 +10,5 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     clean: true
   },
-  mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',
-  devtool: process.env.NODE_ENV === 'production' ? false : 'source-map'
+  mode: 'production',
 };
