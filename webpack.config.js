@@ -2,7 +2,6 @@ const path = require('path');
 
 module.exports = {
   entry: {
-    serviceWorker: './src/sw.js',
     contentScript: './src/content-script.js'
   },
   output: {
