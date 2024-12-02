@@ -75,6 +75,7 @@ function extractData(t) {
     
     const deck = {};
     deck.problems = [];
+    let valid = 1;
     for (let key in columnHeaders) {
       if (isProblem(key)) { // do some logic if column is a problem statement status
         let problemStatus = columns[columnHeaders[key]]?.textContent?.trim().split('\n') || [];
@@ -127,10 +128,15 @@ function extractData(t) {
     }
 
     // Mark invalid entries as null
-    if(deck.username == "" || deck.rank == "") {
+    if(deck.username == "") {
       return null;
     }
+
+    if(deck.rank == ""){
+      deck.rank = valid.toString();
+    }
     
+    valid++;
     return deck; 
   });
                
