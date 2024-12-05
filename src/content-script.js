@@ -70,7 +70,9 @@ function extractData(t) {
   contestType == "Time-Based"? columnHeaders.problemsSolved = score: columnHeaders.score = score; 
   console.log(columnHeaders);
   
+
   const standings = rows.map((row) => {
+    if (row.innerText == "No items") return null;
     const columns = row.querySelectorAll("td");
     
     const deck = {};
@@ -133,7 +135,7 @@ function extractData(t) {
     }
 
     if(deck.rank == ""){
-      deck.rank = valid.toString();
+      return null;
     }
     
     valid++;
